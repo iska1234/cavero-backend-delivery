@@ -59,7 +59,7 @@ LLAMAR A LOS SOCKETS
 ordersDeliverySocket(io);
 
 
-server.listen(3000,'192.168.1.40' || 'localhost',function(){
+server.listen(3000,function(){
     console.log('Aplicacion de NodeJS '+process.pid +' Iniciada...')
 });
 
