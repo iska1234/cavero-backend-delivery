@@ -69,7 +69,7 @@ app.get('/ping',async (req,res) =>{
     return res.json(result.rows[0])
 })
 
-server.listen(3000,function(){
+server.listen(port,function(){
     console.log('Aplicacion de NodeJS '+process.pid +' Iniciada...')
 });
 
