@@ -61,8 +61,7 @@ ordersDeliverySocket(io);
 
 //
 const pool = new pg.Pool({
-    connectionString: 'postgres://iska:P4RDMcTz0KMnQSivSiFjvFVP2Kk8ttcm@dpg-cjuhihh5mpss73duo99g-a.ohio-postgres.render.com/delivery_db_j6w3',
-    ssl: true
+    connectionString: 'postgresql://postgres:EjnuIMD1ebrDF4GU1v78@containers-us-west-203.railway.app:7863/railway'
 })
 
 app.get('/ping',async (req,res) =>{
