@@ -1,3 +1,4 @@
+const pg = require('pg');
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -58,8 +59,18 @@ LLAMAR A LOS SOCKETS
 */
 ordersDeliverySocket(io);
 
+//
+const pool = new pg.Pool({
+    connectionString: 'postgres://iska:P4RDMcTz0KMnQSivSiFjvFVP2Kk8ttcm@dpg-cjuhihh5mpss73duo99g-a.ohio-postgres.render.com/delivery_db_j6w3',
+    ssl: true
+})
 
-server.listen(3000,function(){
+app.get('/ping',async (req,res) =>{
+    const result = await pool.query('SELECT NOW()')
+    return res.json(result.rows[0])
+})
+
+server.listen(3000, '192.168.1.40' || 'localhost',function(){
     console.log('Aplicacion de NodeJS '+process.pid +' Iniciada...')
 });
 

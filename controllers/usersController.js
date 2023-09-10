@@ -87,12 +87,12 @@ module.exports = {
                 tokensString.push(t.notification_token)
             });
             
-            console.log('TOKENS', tokensString);
-            pushNotificationController.sendNotificationToMultipleDevices(tokensString,{
-                title: 'Sesion Iniciada',
-                body: 'Un cliente ha iniciado sesion',
-                id_notification: '1'
-            });
+            // console.log('TOKENS', tokensString);
+            // pushNotificationController.sendNotificationToMultipleDevices(tokensString,{
+            //     title: 'Sesion Iniciada',
+            //     body: 'Un cliente ha iniciado sesion',
+            //     id_notification: '1'
+            // });
             //pushNotificationController.sendNotification('cem5PRBaQ4aYtY9rpaNHJS:APA91bEaHaImIs01SgnqwSEt_c6TXFeddVeYEGyP1LsnX9qY5zIM8YjQnvHZ6f7gu9O5aiU-7GmNVtvzLgM87RwOL6ccyDPO1a8Tfb1iu9gnfcf5niC-HLJn1Y3eMN4phqU59stu6_TK',{
            //     title: 'Sesion Iniciada',
            //     body: 'Un cliente ha iniciado sesion',
