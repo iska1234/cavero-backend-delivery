@@ -11,11 +11,11 @@ types.setTypeParser(1114,function(stringValue){
 });
 
 const databaseConfig = {
-    'host':'127.0.0.1',
-    'port':5432,
-    'database':'delivery_db',
+    'host':'containers-us-west-113.railway.app',
+    'port':6984,
+    'database':'railway',
     'user':'postgres',
-    'password':'123'
+    'password':'57KPsMaXPNkdJQptwxlM'
 };
 
 const db =pgp(databaseConfig);

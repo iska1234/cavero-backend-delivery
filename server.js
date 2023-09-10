@@ -61,7 +61,7 @@ ordersDeliverySocket(io);
 
 //
 const pool = new pg.Pool({
-    connectionString: 'postgresql://postgres:EjnuIMD1ebrDF4GU1v78@containers-us-west-203.railway.app:7863/railway'
+    connectionString: 'postgresql://postgres:57KPsMaXPNkdJQptwxlM@containers-us-west-113.railway.app:6984/railway'
 })
 
 app.get('/ping',async (req,res) =>{
@@ -69,7 +69,7 @@ app.get('/ping',async (req,res) =>{
     return res.json(result.rows[0])
 })
 
-server.listen(3000,function(){
+server.listen(3000, '192.168.1.40' || 'localhost',function(){
     console.log('Aplicacion de NodeJS '+process.pid +' Iniciada...')
 });
 
